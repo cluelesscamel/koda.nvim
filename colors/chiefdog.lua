@@ -19,7 +19,7 @@ local c = {
   constant    = "#d9ba73",
   hint        = "#8ebeec",
   cursor      = "#272727",
-  selection   = "#d9ba73",
+  selection   = "#525252",
   search      = "#333333",
   error       = "#ff7676",
   -- TODO: reuse the existing colors
@@ -47,7 +47,7 @@ local groups = {
   Pmenu        = { bg = c.cursor, fg = c.fg },
   PmenuSel     = { bg = c.line, fg = c.definition, bold = true },
   PmenuThumb   = { bg = c.fg },
-  Visual       = { fg = c.bg, bg = c.selection },
+  Visual       = { bg = c.selection },
   Search       = { bg = c.constant, fg = c.bg },
   IncSearch    = { link = "Search" },
   CurSearch    = { link = "Search" },
