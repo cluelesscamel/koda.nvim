@@ -13,6 +13,7 @@ local c = {
   bg          = "#101010",
   fg          = "#b0b0b0",
   comment     = "#444444",
+  line        = "#444444",
   keyword     = "#777777",
   definition  = "#ffffff",
   constant    = "#d9ba73",
@@ -31,26 +32,26 @@ local c = {
 local groups = {
   Normal       = { bg = c.bg, fg = c.fg },
   NormalFloat  = { bg = c.bg, fg = c.fg },
-  FloatBorder  = { bg = c.bg, fg = c.comment },
+  FloatBorder  = { bg = c.bg, fg = c.line },
   Cursor       = { bg = "#ffffff", fg = c.bg },
   CursorLine   = { bg = c.cursor },
   CursorLineNr = { fg = c.definition, bold = true },
-  LineNr       = { fg = c.comment },
+  LineNr       = { fg = c.line },
   StatusLine   = { bg = c.cursor, fg = c.fg },
   StatusLineNC = { bg = c.bg, fg = c.fg },
   StatusLineTerm = { bg = c.cursor, fg = c.fg },
-  StatusLineTermNC = { bg = c.bg, fg = c.comment },
+  StatusLineTermNC = { bg = c.bg, fg = c.line },
   WinBar       = { bg = c.bg, fg = c.fg, bold = true },
-  WinBarNC     = { bg = c.bg, fg = c.comment },
-  WinSeparator = { fg = c.comment },
+  WinBarNC     = { bg = c.bg, fg = c.line },
+  WinSeparator = { fg = c.line },
   Pmenu        = { bg = c.cursor, fg = c.fg },
-  PmenuSel     = { bg = c.comment, fg = c.definition, bold = true },
+  PmenuSel     = { bg = c.line, fg = c.definition, bold = true },
   PmenuThumb   = { bg = c.fg },
   Visual       = { fg = c.bg, bg = c.selection },
   Search       = { bg = c.constant, fg = c.bg },
   IncSearch    = { link = "Search" },
   CurSearch    = { link = "Search" },
-  MatchParen   = { fg = c.bg, bg = c.constant },
+  MatchParen   = { fg = c.fg, bg = c.line },
   NonText      = { fg = c.cursor },
   EndOfBuffer  = { fg = c.bg },
   Question     = { fg = c.constant },
@@ -60,7 +61,7 @@ local groups = {
   ModeMsg      = { fg = c.constant },
   Directory    = { fg = c.hint },
   QuickFixLine = { fg = c.constant, underline = true },
-  qfLineNr     = { fg = c.comment },
+  qfLineNr     = { fg = c.line },
 
   -- Syntax
   Keyword      = { fg = c.keyword },
@@ -186,7 +187,6 @@ local groups = {
 
   -- Snacks
   SnacksPickerDir = { fg = c.keyword },
-
 }
 
 for group, hl in pairs(groups) do
