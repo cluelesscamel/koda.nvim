@@ -92,7 +92,7 @@ local groups = {
   Constant     = { fg = c.constant },
   Macro        = { fg = c.constant },
   Comment      = { fg = c.comment, italic = true },
-  Todo         = { fg = c.bg, bg = c.constant, bold = true },
+  Todo         = { fg = c.bg, bg = c.hint, bold = true },
   Special      = { fg = c.fg },
   SpecialChar  = { link = "Special" },
   SpecialComment = { link = "Comment" },
