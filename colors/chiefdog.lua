@@ -6,23 +6,22 @@ end
 vim.g.colors_name = "chiefdog"
 local utils = require("chiefdog.utils")
 
--- TODO: add lightheme
+-- TODO: add light-theme
 -- stylua: ignore
 local c = {
   transparent = "none",
   bg          = "#101010",
   fg          = "#b0b0b0",
-  comment     = "#50585D",
+  comment     = "#50585d",
   line        = "#444444",
   keyword     = "#777777",
   definition  = "#ffffff",
   constant    = "#d9ba73",
   hint        = "#8ebeec",
   cursor      = "#272727",
-  selection   = "#303030", --
+  selection   = utils.blend("#0058D0", "#101010", 0.4),
   search      = "#333333",
   error       = "#ff7676",
-  -- TODO: reuse the existing colors
   add         = "#86CD82",
   change      = "#d9ba73",
   delete      = "#ff7676",
@@ -45,10 +44,10 @@ local groups = {
   WinBarNC     = { bg = c.bg, fg = c.line },
   WinSeparator = { fg = c.line },
   Pmenu        = { fg = c.fg, bg = c.transparent },
-  PmenuSel     = { bg = c.line, fg = c.definition, bold = true },
+  PmenuSel     = { bg = c.selection, fg = c.definition, bold = true },
   PmenuThumb   = { bg = c.fg },
   PmenuMatch   = { fg = c.constant, bold = true },
-  Visual       = { bg = c.selection },
+  Visual       = { fg = c.definition, bg = c.selection  },
   Search       = { bg = c.constant, fg = c.bg },
   IncSearch    = { link = "Search" },
   CurSearch    = { link = "Search" },
