@@ -2,12 +2,15 @@
 <p align="center">Code's quiet companion.</p>
 <p align="center"> A minimalist theme for Neovim, written in Lua.</p>
 
-<img width="1510" height="943" alt="koda-dark-bigger-2026-01-07" src="https://github.com/user-attachments/assets/8aba84e5-519d-4a2f-8632-7387e4da4cc2" />
-<img width="1510" height="943" alt="koda-light-bigger-2026-01-07" src="https://github.com/user-attachments/assets/bfa5d1e1-1afa-4645-a7d8-c4d6b519dcd0" />
+### Dark
+<img width="1127" height="746" alt="Screenshot 2026-01-07 at 21 34 20" src="https://github.com/user-attachments/assets/e892c373-ebc2-436d-8efa-7d1fd3d1f1a7" />
+
+### Light
+<img width="1127" height="746" alt="Screenshot 2026-01-07 at 21 36 22" src="https://github.com/user-attachments/assets/02a71d9a-3067-4bce-a535-afebb1e190dc" />
 
 > [!NOTE]
 > Developed on a 14" XDR retina display, your mileage may vary depending on your screen and brightness.
-
+  
 ## Installation
 
 [lazy.nvim:](https://github.com/folke/lazy.nvim)
@@ -18,7 +21,8 @@
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
-    vim.cmd("colorscheme koda") -- NOTE: no setup() required
+    -- require("koda").setup({ transparent = true })
+    vim.cmd("colorscheme koda")
   end,
 }
 ```
@@ -35,9 +39,11 @@ vim.cmd("colorscheme koda")
 
 ## Configuration
 > [!IMPORTANT]
-> Configure options _before_ setting the colorscheme by calling `setup` before `vim.cmd("colorscheme koda")` for changes to take effect. 
+> Set the configuration **BEFORE** calling `vim.cmd("colorscheme koda")`.
 
-You can call `setup` if you wish to override the following defaults:
+<details>
+  <summary>Default Options</summary>
+  
 ```lua
 require("koda").setup({
     bold = true           -- disable bold for functions and keywords
@@ -71,32 +77,32 @@ require("koda").setup({
 })
 ```
 
-<!--
-## Color Groups
+</details>
 
-When overriding colors, you can use any of the following keys from the colors palette:
+<details>
+  <summary>Settings & Changing Colors</summary>
 
-| Key      | Description                                |
-| -------- | ------------------------------------------ |
-| bg       | Main editor background                     |
-| fg       | Main editor foreground                     |
-| func     | Functions and Headings                     |
-| keyword  | Language keywords (`if`, `else`, `return`) |
-| constant | Numbers, Booleans, and Constants           |
-| comment  | Code comments                              |
-| string   | String literals                            |
-| line     | CursorLine and UI borders                  |
-| visual   | Selection background                       |
-| hint     | Diagnostic hints, directories              |
-| error    | Error messages, delete                     |
-| add      | Diff/git related add                       |
-| change   | Diff/git related change                    |
--->
+```lua
+  require("koda").setup({
+  bold = false,
+  -- For example, add more colors to the theme by changing `func` and `keyword` colors:
+  colors = {
+    func = "#4078F2",
+    keyword = "#A627A4"
+  },
+})
+```
 
-## Explicit Plugin support
+</details>
+
+## Plugin support
+**NOTE:** I only took the effort to make adjustments for a few plugins. I don't use many, so I am out of touch. Open an issue if something is severely off.
 
 - [blink.cmp](https://github.com/saghen/blink.cmp)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [mini.pick](https://github.com/nvim-mini/mini.pick)
 - [oil.nvim](https://github.com/stevearc/oil.nvim)
 - [snacks.nvim](https://github.com/folke/snacks.nvim)
+
+## Language support
+I feel like most languages have sensible defaults thanks to Neovim's built-in queries, so I've opted not to add anything specific for a language in favor of keeping the footprint smaller.
