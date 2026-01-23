@@ -12,6 +12,7 @@ function M.get_hl(c)
     DiagnosticInfo         = { fg = c.fg },
     LspInlayHint           = { fg = c.comment },
     ["@lsp.type.comment"]  = {}, -- use treesitter styles
+    ["@lsp.typemod.class.declaration"] = { link = "Function" },
   }
 end
 
