@@ -43,7 +43,7 @@ function M.get_hl(c, opts)
     ErrorMsg          = { fg = c.danger },
     WarningMsg        = { link = "Question" },
     ModeMsg           = { link = "Question" },
-    Directory         = { fg = c.info },
+    Directory         = { fg = c.emphasis },
     QuickFixLine      = { fg = c.const, underline = true },
     qfLineNr          = { fg = c.comment },
     TabLineSel        = { fg = c.emphasis, bg = c.line },
