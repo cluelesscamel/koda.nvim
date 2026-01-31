@@ -18,6 +18,7 @@ M.plugins = {
   ["snacks.nvim"]              = "snacks",
   ["telescope.nvim"]           = "telescope",
   ["trouble.nvim"]             = "trouble",
+  ["neo-tree.nvim"]            = "neotree",
 }
 
 --- Gets highlights from a specific group
