@@ -6,7 +6,7 @@ function M.get_hl(c)
   return {
     NeoTreeGitModified   = { fg = c.warning },
     NeoTreeGitAdded      = { fg = c.success },
-    NeoTreeGitDeleted    = { fg = c.danger },
+    NeoTreeGitDeleted    = { fg = c.danger, strikethrough = true },
     NeoTreeGitStaged     = { fg = c.success },
     NeoTreeGitConflict   = { fg = c.red },
     NeoTreeGitUntracked  = { fg = c.orange },
