@@ -4,8 +4,8 @@
   <p>A minimalist theme for Neovim, written in Lua</p>
 </div>
 
-![Dark Mode](https://github.com/user-attachments/assets/e892c373-ebc2-436d-8efa-7d1fd3d1f1a7)
-![Light Mode](https://github.com/user-attachments/assets/02a71d9a-3067-4bce-a535-afebb1e190dc)
+<img width="1136" height="745" alt="image" src="https://github.com/user-attachments/assets/8e31231c-d40d-44b5-8e29-0be77339fca9" />
+<img width="1136" height="745" alt="image" src="https://github.com/user-attachments/assets/d2018883-036b-4276-913e-b0d638b98972" />
 
 > [!NOTE]
 > Developed on a 14" XDR retina display, your mileage may vary depending on your screen and brightness.
@@ -117,6 +117,7 @@ require("koda").setup({
         emphasis   = "#ffffff",
         func       = "#ffffff",
         string     = "#ffffff",
+        char       = "#ffffff",
         const      = "#d9ba73",
         highlight  = "#458ee6",
         info       = "#8ebeec",
@@ -151,6 +152,7 @@ require("koda").setup({
   colors = {
     func = "#4078F2", -- changes the color of functions
     keyword = "#A627A4", -- changes the color of keywords
+    char = "#f2a4db", -- make characters pop out more by adding a different color
   },
 
   on_highlights = function(hl, c)
@@ -180,4 +182,4 @@ Most languages have sensible defaults thanks to Neovim's built-in queries, so I'
 
 ## Extras
 
-Extra color configs for [WezTerm](extras/wezterm/), can be found in [extras](extras/). To use them, refer to their respective documentation.
+Extra color configs for [WezTerm](https://wezterm.org/), [Ghostty](https://ghostty.org/), [Lazygit](https://github.com/jesseduffield/lazygit), [fzf](https://github.com/junegunn/fzf) and others can be found in [extras](extras/). To use them, refer to their respective documentation.

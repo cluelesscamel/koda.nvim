@@ -11,6 +11,7 @@ local palette = {
   emphasis   = "#000000",
   func       = "#000000",
   string     = "#407f00",
+  char       = "#407f00",
   const      = "#b07700",
   highlight  = "#0A89FF",
   info       = "#0253be",
@@ -20,8 +21,8 @@ local palette = {
   green      = "#019833",
   orange     = "#f54d27",
   red        = "#701516",
-  pink       = "#f2a4db",
-  cyan       = "#5abfb5",
+  pink       = "#a200d1",
+  cyan       = "#007d7d",
 }
 
 return palette
